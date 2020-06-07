@@ -291,6 +291,13 @@ a {
 .service-list {
     display: flex;
 }
+.service-list img {
+    display: block;
+}
+
+.service-list .item {
+    position: relative;
+}
 
 .service-list .item:not(:last-child) {
     margin-right: 30px;
@@ -308,10 +315,19 @@ a {
 }
 
 .service-subtitle {
-    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
 
     margin-top:  0px;
     margin-bottom: 0px;
+
+    font-family: Roboto;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
     color: var(--white-color);
     background-color: var(--secondary-background-color);
