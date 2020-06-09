@@ -151,8 +151,8 @@ a {
     display: block;
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 1px;
+    width: calc(100% - 2px);
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
@@ -353,6 +353,7 @@ a {
     line-height: 1.42;
     text-align: center;
 }
+
 /* Team */
 
 .team {
@@ -413,6 +414,10 @@ a {
     margin-bottom: 36px;
 }
 
+.team-social li:not(:last-child) {
+    margin-right: 10px;
+}
+
 .team-link {
     display: flex;
     align-items: center;
@@ -429,9 +434,6 @@ a {
     fill: var(--white-color);
 }
 
-.team-link {
-    margin-right: 10px;
-}
 /* Costumers */
 
 .costumers-title {
@@ -512,16 +514,6 @@ a {
 .footer-socials {
     display: flex;
 }
-
-/* .footer-socials .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background-color: var(--background-social-color);
-    border-radius: 50%;
-} */
 
 .footer-icon {
     display: flex;
@@ -677,9 +669,46 @@ a {
     padding-bottom: 94px;
 }
 .portfolio-link {
+    position: relative;
     display: block;
     width: 370px;
     border: 1px solid #EEEEEE;
+}
+
+.portfolio-thumb {
+    position: relative;
+}
+
+.portfolio-thumb img {
+    display: block;
+}
+
+.portfolio-description {
+    position: absolute;
+    display: block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--white-color);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+
+    opacity: 0;
+}
+
+.portfolio-link:hover .portfolio-description {
+    opacity: 1;
 }
 
 .portfolio-picslist .item {
